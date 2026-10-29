@@ -1,0 +1,22 @@
+﻿<Window x:Class="FitnessClub.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Авторизация"
+        Height="400" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#4285B4">
+    <Grid>
+        <Border Background="White" CornerRadius="10" Margin="40,10,40,10" Padding="30">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Фитнес-Клуб" FontSize="26" FontWeight="Bold" Foreground="#4285B4" HorizontalAlignment="Center"/>
+                <TextBlock Text="Логин" Foreground="#2C3E50" Margin="0,0,0,5"/>
+                <TextBox x:Name="TxtLogin" Height="35" FontSize="14" Padding="8,0,0,0" VerticalContentAlignment="Center"/>
+                <TextBlock Text="Пароль" Foreground="#2C3E50" Margin="0,15,0,5"/>
+                <PasswordBox x:Name="TxtPassword" Height="35" FontSize="14" Padding="8,0,0,0" VerticalContentAlignment="Center"/>
+                <Button Content="Войти" Height="34" Margin="0,25,0,0" Background="#27AE60" Foreground="White" FontSize="15" FontWeight="SemiBold" BorderThickness="0" Cursor="Hand" Click="BtnLogin_Click"/>
+                <Button Content="Выход" Height="34" Margin="0,10,0,0" Background="#BDC3C7" Foreground="White" FontSize="15" BorderThickness="0" Cursor="Hand" Click="BtnExit_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

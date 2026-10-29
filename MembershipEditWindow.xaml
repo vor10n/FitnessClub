@@ -1,0 +1,64 @@
+﻿<Window x:Class="FitnessClub.MembershipEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Абонемент" Height="560" Width="480"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F5F5F5">
+    <Grid Margin="25,10,25,8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" x:Name="TxtTitle" Text="Новый абонемент" FontSize="20" FontWeight="Bold" Foreground="#4285B4" Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="Клиент *" Foreground="#2C3E50" Margin="0,0,0,5"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="TxtClient" Grid.Column="0" Height="33" FontSize="14" Padding="8,0,0,0" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                <Button Grid.Column="1" Content="Выбрать" Width="90" Height="33" Margin="8,0,0,0" Background="#3498DB" Foreground="White" BorderThickness="0" Cursor="Hand" Click="BtnChooseClient_Click"/>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0,0,0,10">
+            <TextBlock Text="Тип абонемента *" Foreground="#2C3E50" Margin="0,0,0,5"/>
+            <ComboBox x:Name="CmbType" Height="33" FontSize="14" VerticalContentAlignment="Center" SelectionChanged="CmbType_SelectionChanged">
+                <ComboBoxItem Content="Месячный"/>
+                <ComboBoxItem Content="Полугодовой"/>
+                <ComboBoxItem Content="Годовой"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,0,0,10">
+            <TextBlock Text="Дата начала *" Foreground="#2C3E50" Margin="0,0,0,5"/>
+            <DatePicker x:Name="DpStartDate" Height="33" FontSize="14" VerticalContentAlignment="Center" SelectedDateChanged="DpStartDate_SelectedDateChanged"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Margin="0,0,0,10">
+            <TextBlock Text="Дата окончания" Foreground="#2C3E50" Margin="0,0,0,5"/>
+            <DatePicker x:Name="DpEndDate" Height="33" FontSize="14" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Margin="0,0,0,10">
+            <TextBlock Text="Цена *" Foreground="#2C3E50" Margin="0,0,0,5"/>
+            <TextBox x:Name="TxtPrice" Height="33" FontSize="14" Padding="8,0,0,0" VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Сохранить" Width="130" Height="27" Background="#27AE60" Foreground="White" FontSize="14" BorderThickness="0" Cursor="Hand" Click="BtnSave_Click"/>
+            <Button Content="Отмена" Width="110" Height="27" Margin="10,0,0,0" Background="#BDC3C7" Foreground="White" FontSize="14" BorderThickness="0" Cursor="Hand" Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
